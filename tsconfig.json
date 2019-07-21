@@ -1,6 +1,7 @@
 {
   "exclude": ["dist", "node_modules", "**/*.test.*"],
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "declaration": true
   }
 }

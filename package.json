@@ -1,6 +1,6 @@
 {
   "name": "@suddenly/mailer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple templated email sender powered by SendGrid",
   "main": "dist/index.js",
   "scripts": {

@@ -33,7 +33,7 @@ export class Mailer {
     return EJS.render(t, templateLocals);
   }
 
-  public async send(template: string, to: string, subject: string, templateLocals: Dictionary<any>): Promise<any> {
+  public async send(template: string, to: string, subject: string, templateLocals: Dictionary<any>): Promise<string> {
     const from = this.fromAddress;
 
     const html = await this.renderTemplate('html', template, templateLocals);
@@ -41,9 +41,15 @@ export class Mailer {
 
     const message = { to, from, subject, html, text };
 
-    if (process.env.NODE_ENV === 'test') return message;
+    const output = `to: ${message.to}\nfrom: ${message.from}\nsubject: ${
+      message.subject
+    }\n\n----\n\n${html}\n\n----\n\n${text}`;
 
-    return Mail.send(message);
+    if (process.env.NODE_ENV === 'test') return output;
+
+    return Mail.send(message).then(() => {
+      return output;
+    });
   }
 }
 

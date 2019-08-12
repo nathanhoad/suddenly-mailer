@@ -1,7 +1,7 @@
 {
   "name": "@suddenly/mailer",
   "version": "1.1.0",
-  "description": "Simple templated email sender powered by SendGrid",
+  "description": "Simple templated email sender",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
@@ -14,8 +14,7 @@
   },
   "keywords": [
     "notifications",
-    "email",
-    "sendgrid"
+    "email"
   ],
   "author": "Nathan Hoad <nathan@nathanhoad.net>",
   "license": "ISC",
@@ -29,6 +28,7 @@
     "ejs": "^2.6.2",
     "fs-extra": "^8.1.0",
     "guess-root-path": "^1.0.0",
+    "node-ses": "^2.2.1",
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.3"
   },

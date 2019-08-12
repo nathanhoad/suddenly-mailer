@@ -24,17 +24,17 @@
   "homepage": "https://github.com/nathanhoad/suddenly-mailer#readme",
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
-    "@types/fs-extra": "^8.0.0",
     "ejs": "^2.6.2",
     "fs-extra": "^8.1.0",
     "guess-root-path": "^1.0.0",
-    "node-ses": "^2.2.1",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.5.3"
+    "node-ses": "^2.2.1"
   },
   "devDependencies": {
+    "@types/fs-extra": "^8.0.0",
     "@types/jest": "^24.0.15",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
   },
   "jest": {
     "moduleFileExtensions": [
